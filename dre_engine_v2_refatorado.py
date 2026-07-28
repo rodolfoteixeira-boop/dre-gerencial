@@ -124,7 +124,7 @@ def processar_dre(pagar_path, notas_path, template_path, output_path, ano=2026, 
     col_data_nf = notas.columns[10]  # K
     col_total_nf = notas.columns[5]  # F
     col_custo_total = notas.columns[6]  # G
-    col_liquida_nf = notas.columns[41]  # AP - VENDA LIQUIDA (corrigido de 39 para 41)
+    col_liquida_nf = notas.columns[39]  # AN - VENDA LIQUIDA
     
     notas['Data_Calculo'] = pd.to_datetime(notas[col_data_nf], errors='coerce')
     notas_valid = notas.dropna(subset=['Data_Calculo']).copy()
